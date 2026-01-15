@@ -17,7 +17,7 @@
             android:id="@+id/textoNombreServicio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GoRide Económico"
+            android:text="GoRide EconÃ³mico"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
@@ -26,7 +26,7 @@
             android:id="@+id/textoDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Servicio de transporte básico a bajo costo"
+            android:text="Servicio de transporte bÃ¡sico a bajo costo"
             android:textSize="14sp"
             android:layout_marginTop="4dp"/>
 

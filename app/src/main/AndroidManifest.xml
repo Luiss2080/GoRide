@@ -27,7 +27,7 @@
             android:name=".controlador.ActividadLogin"
             android:exported="false" />
 
-        <!-- Activity de Menú Principal -->
+        <!-- Activity de MenÃº Principal -->
         <activity
             android:name=".controlador.ActividadMenuPrincipal"
             android:exported="false" />

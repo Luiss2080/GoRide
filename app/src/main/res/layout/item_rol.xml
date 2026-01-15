@@ -37,7 +37,7 @@
 
             android:layout_marginTop="4dp"/>
             android:textSize="14sp"
-            android:text="Descripción del rol"
+            android:text="DescripciÃ³n del rol"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/textoDescripcion"

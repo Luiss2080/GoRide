@@ -55,7 +55,7 @@
                 android:textColor="@android:color/black"
                 android:layout_marginBottom="16dp"/>
 
-            <!-- Botón Gestión de Usuarios -->
+            <!-- BotÃ³n GestiÃ³n de Usuarios -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                     <TextView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:text="👤"
+                        android:text="ðŸ‘¤"
                         android:textSize="32sp"
                         android:gravity="center"/>
 
@@ -106,7 +106,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="›"
+                        android:text="â€º"
                         android:textSize="32sp"
                         android:textColor="@android:color/darker_gray"/>
 
@@ -114,7 +114,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Botón Gestión de Roles -->
+            <!-- BotÃ³n GestiÃ³n de Roles -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
                     <TextView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:text="⚙️"
+                        android:text="âš™ï¸"
                         android:textSize="32sp"
                         android:gravity="center"/>
 
@@ -165,7 +165,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="›"
+                        android:text="â€º"
                         android:textSize="32sp"
                         android:textColor="@android:color/darker_gray"/>
 
@@ -173,7 +173,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Botón Gestión de Conductores -->
+            <!-- BotÃ³n GestiÃ³n de Conductores -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -193,7 +193,7 @@
                     <TextView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:text="🚗"
+                        android:text="ðŸš—"
                         android:textSize="32sp"
                         android:gravity="center"/>
 
@@ -215,7 +215,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Administrar conductores y vehículos"
+                            android:text="Administrar conductores y vehÃ­culos"
                             android:textSize="12sp"
                             android:textColor="@android:color/darker_gray"/>
 
@@ -224,7 +224,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="›"
+                        android:text="â€º"
                         android:textSize="32sp"
                         android:textColor="@android:color/darker_gray"/>
 
@@ -232,7 +232,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Botón Gestión de Viajes -->
+            <!-- BotÃ³n GestiÃ³n de Viajes -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -252,7 +252,7 @@
                     <TextView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:text="📍"
+                        android:text="ðŸ“"
                         android:textSize="32sp"
                         android:gravity="center"/>
 
@@ -283,7 +283,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="›"
+                        android:text="â€º"
                         android:textSize="32sp"
                         android:textColor="@android:color/darker_gray"/>
 
@@ -291,7 +291,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Botón Gestión de Servicios -->
+            <!-- BotÃ³n GestiÃ³n de Servicios -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -311,7 +311,7 @@
                     <TextView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:text="💰"
+                        android:text="ðŸ’°"
                         android:textSize="32sp"
                         android:gravity="center"/>
 
@@ -342,7 +342,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="›"
+                        android:text="â€º"
                         android:textSize="32sp"
                         android:textColor="@android:color/darker_gray"/>
 
@@ -350,7 +350,7 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Botón Cerrar Sesión -->
+            <!-- BotÃ³n Cerrar SesiÃ³n -->
             <Button
                 android:id="@+id/botonCerrarSesion"
                 android:layout_width="match_parent"

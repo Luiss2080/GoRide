@@ -52,7 +52,7 @@
             android:id="@+id/textoAnio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Año: 2020"
+            android:text="AÃ±o: 2020"
             android:textSize="14sp"
             android:layout_marginTop="2dp"/>
 

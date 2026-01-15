@@ -1,47 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GoRide</string>
 
     <!-- Login -->
-    <string name="titulo_login">Iniciar Sesión</string>
+    <string name="titulo_login">Iniciar SesiÃ³n</string>
     <string name="usuario">Usuario</string>
-    <string name="contrasena">Contraseña</string>
+    <string name="contrasena">ContraseÃ±a</string>
     <string name="boton_ingresar">Ingresar</string>
     <string name="boton_registrar">Registrarse</string>
     <string name="error_credenciales">Credenciales incorrectas</string>
     <string name="error_campos_vacios">Por favor complete todos los campos</string>
 
-    <!-- Menú Principal -->
-    <string name="titulo_menu_principal">Menú Principal</string>
+    <!-- MenÃº Principal -->
+    <string name="titulo_menu_principal">MenÃº Principal</string>
     <string name="bienvenido">Bienvenido</string>
-    <string name="boton_cerrar_sesion">Cerrar Sesión</string>
+    <string name="boton_cerrar_sesion">Cerrar SesiÃ³n</string>
 
-    <!-- Módulo Usuarios -->
-    <string name="titulo_usuarios">Gestión de Usuarios</string>
+    <!-- MÃ³dulo Usuarios -->
+    <string name="titulo_usuarios">GestiÃ³n de Usuarios</string>
     <string name="titulo_crear_usuario">Crear Usuario</string>
     <string name="titulo_editar_usuario">Editar Usuario</string>
     <string name="nombre_completo">Nombre Completo</string>
-    <string name="correo_electronico">Correo Electrónico</string>
-    <string name="telefono">Teléfono</string>
+    <string name="correo_electronico">Correo ElectrÃ³nico</string>
+    <string name="telefono">TelÃ©fono</string>
 
-    <!-- Módulo Roles -->
-    <string name="titulo_roles">Gestión de Roles</string>
+    <!-- MÃ³dulo Roles -->
+    <string name="titulo_roles">GestiÃ³n de Roles</string>
     <string name="titulo_crear_rol">Crear Rol</string>
     <string name="titulo_editar_rol">Editar Rol</string>
     <string name="nombre_rol">Nombre del Rol</string>
-    <string name="descripcion_rol">Descripción del Rol</string>
+    <string name="descripcion_rol">DescripciÃ³n del Rol</string>
 
-    <!-- Módulo Conductores -->
-    <string name="titulo_conductores">Gestión de Conductores</string>
+    <!-- MÃ³dulo Conductores -->
+    <string name="titulo_conductores">GestiÃ³n de Conductores</string>
     <string name="titulo_crear_conductor">Crear Conductor</string>
     <string name="titulo_editar_conductor">Editar Conductor</string>
     <string name="licencia_conducir">Licencia de Conducir</string>
-    <string name="placa_vehiculo">Placa del Vehículo</string>
-    <string name="modelo_vehiculo">Modelo del Vehículo</string>
-    <string name="color_vehiculo">Color del Vehículo</string>
-    <string name="anio_vehiculo">Año del Vehículo</string>
+    <string name="placa_vehiculo">Placa del VehÃ­culo</string>
+    <string name="modelo_vehiculo">Modelo del VehÃ­culo</string>
+    <string name="color_vehiculo">Color del VehÃ­culo</string>
+    <string name="anio_vehiculo">AÃ±o del VehÃ­culo</string>
 
-    <!-- Módulo Viajes -->
-    <string name="titulo_viajes">Gestión de Viajes</string>
+    <!-- MÃ³dulo Viajes -->
+    <string name="titulo_viajes">GestiÃ³n de Viajes</string>
     <string name="titulo_crear_viaje">Crear Viaje</string>
     <string name="titulo_editar_viaje">Editar Viaje</string>
     <string name="origen">Origen</string>
@@ -51,14 +52,14 @@
     <string name="estado_viaje">Estado del Viaje</string>
     <string name="tarifa">Tarifa</string>
 
-    <!-- Módulo Servicios -->
-    <string name="titulo_servicios">Gestión de Servicios</string>
+    <!-- MÃ³dulo Servicios -->
+    <string name="titulo_servicios">GestiÃ³n de Servicios</string>
     <string name="titulo_crear_servicio">Crear Servicio</string>
     <string name="titulo_editar_servicio">Editar Servicio</string>
     <string name="nombre_servicio">Nombre del Servicio</string>
-    <string name="descripcion_servicio">Descripción del Servicio</string>
+    <string name="descripcion_servicio">DescripciÃ³n del Servicio</string>
     <string name="precio_base">Precio Base</string>
-    <string name="precio_kilometro">Precio por Kilómetro</string>
+    <string name="precio_kilometro">Precio por KilÃ³metro</string>
 
     <!-- Botones Generales -->
     <string name="boton_guardar">Guardar</string>
@@ -76,8 +77,8 @@
     <string name="mensaje_error_crear">Error al crear el registro</string>
     <string name="mensaje_error_actualizar">Error al actualizar el registro</string>
     <string name="mensaje_error_eliminar">Error al eliminar el registro</string>
-    <string name="mensaje_confirmacion_eliminar">¿Está seguro de eliminar este registro?</string>
-    <string name="si">Sí</string>
+    <string name="mensaje_confirmacion_eliminar">Â¿EstÃ¡ seguro de eliminar este registro?</string>
+    <string name="si">SÃ­</string>
     <string name="no">No</string>
 
     <!-- Estados -->
