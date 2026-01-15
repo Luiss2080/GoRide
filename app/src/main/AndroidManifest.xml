@@ -34,11 +34,11 @@
 
         <!-- Activities de Usuarios -->
         <activity
-            android:name=".controlador.ActividadListaUsuarios"
+            android:name=".controlador.usuario.ActividadListaUsuarios"
             android:exported="false" />
 
         <activity
-            android:name=".controlador.ActividadFormularioUsuario"
+            android:name=".controlador.usuario.ActividadFormularioUsuario"
             android:exported="false" />
 
     </application>
