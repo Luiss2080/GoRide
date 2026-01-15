@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">GoRide</string>
+
+    <!-- Login -->
+    <string name="titulo_login">Iniciar Sesión</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="boton_ingresar">Ingresar</string>
+    <string name="boton_registrar">Registrarse</string>
+    <string name="error_credenciales">Credenciales incorrectas</string>
+    <string name="error_campos_vacios">Por favor complete todos los campos</string>
+
+    <!-- Menú Principal -->
+    <string name="titulo_menu_principal">Menú Principal</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="boton_cerrar_sesion">Cerrar Sesión</string>
+
+    <!-- Módulo Usuarios -->
+    <string name="titulo_usuarios">Gestión de Usuarios</string>
+    <string name="titulo_crear_usuario">Crear Usuario</string>
+    <string name="titulo_editar_usuario">Editar Usuario</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="correo_electronico">Correo Electrónico</string>
+    <string name="telefono">Teléfono</string>
+
+    <!-- Módulo Roles -->
+    <string name="titulo_roles">Gestión de Roles</string>
+    <string name="titulo_crear_rol">Crear Rol</string>
+    <string name="titulo_editar_rol">Editar Rol</string>
+    <string name="nombre_rol">Nombre del Rol</string>
+    <string name="descripcion_rol">Descripción del Rol</string>
+
+    <!-- Módulo Conductores -->
+    <string name="titulo_conductores">Gestión de Conductores</string>
+    <string name="titulo_crear_conductor">Crear Conductor</string>
+    <string name="titulo_editar_conductor">Editar Conductor</string>
+    <string name="licencia_conducir">Licencia de Conducir</string>
+    <string name="placa_vehiculo">Placa del Vehículo</string>
+    <string name="modelo_vehiculo">Modelo del Vehículo</string>
+    <string name="color_vehiculo">Color del Vehículo</string>
+    <string name="anio_vehiculo">Año del Vehículo</string>
+
+    <!-- Módulo Viajes -->
+    <string name="titulo_viajes">Gestión de Viajes</string>
+    <string name="titulo_crear_viaje">Crear Viaje</string>
+    <string name="titulo_editar_viaje">Editar Viaje</string>
+    <string name="origen">Origen</string>
+    <string name="destino">Destino</string>
+    <string name="fecha_viaje">Fecha del Viaje</string>
+    <string name="hora_viaje">Hora del Viaje</string>
+    <string name="estado_viaje">Estado del Viaje</string>
+    <string name="tarifa">Tarifa</string>
+
+    <!-- Módulo Servicios -->
+    <string name="titulo_servicios">Gestión de Servicios</string>
+    <string name="titulo_crear_servicio">Crear Servicio</string>
+    <string name="titulo_editar_servicio">Editar Servicio</string>
+    <string name="nombre_servicio">Nombre del Servicio</string>
+    <string name="descripcion_servicio">Descripción del Servicio</string>
+    <string name="precio_base">Precio Base</string>
+    <string name="precio_kilometro">Precio por Kilómetro</string>
+
+    <!-- Botones Generales -->
+    <string name="boton_guardar">Guardar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="boton_eliminar">Eliminar</string>
+    <string name="boton_editar">Editar</string>
+    <string name="boton_crear">Crear</string>
+    <string name="boton_buscar">Buscar</string>
+    <string name="boton_volver">Volver</string>
+
+    <!-- Mensajes -->
+    <string name="mensaje_exito_crear">Registro creado exitosamente</string>
+    <string name="mensaje_exito_actualizar">Registro actualizado exitosamente</string>
+    <string name="mensaje_exito_eliminar">Registro eliminado exitosamente</string>
+    <string name="mensaje_error_crear">Error al crear el registro</string>
+    <string name="mensaje_error_actualizar">Error al actualizar el registro</string>
+    <string name="mensaje_error_eliminar">Error al eliminar el registro</string>
+    <string name="mensaje_confirmacion_eliminar">¿Está seguro de eliminar este registro?</string>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
+
+    <!-- Estados -->
+    <string name="estado_activo">Activo</string>
+    <string name="estado_inactivo">Inactivo</string>
+    <string name="estado_pendiente">Pendiente</string>
+    <string name="estado_en_curso">En Curso</string>
+    <string name="estado_completado">Completado</string>
+    <string name="estado_cancelado">Cancelado</string>
+</resources>
