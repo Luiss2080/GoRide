@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+</ScrollView>
+
+    </LinearLayout>
+
+            android:layout_marginTop="2dp"/>
+            android:textSize="12sp"
+            android:text="juan_perez / cliente123"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+        <TextView
+
+            android:layout_marginTop="4dp"/>
+            android:textSize="12sp"
+            android:text="admin / admin123"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+        <TextView
+
+            android:layout_marginTop="16dp"/>
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="Usuarios de Prueba:"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+        <TextView
+        <!-- Información de Usuarios de Prueba -->
+
+        </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+                    android:backgroundTint="@android:color/holo_blue_dark"/>
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="@string/boton_ingresar"
+                    android:layout_height="60dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/botonIngresar"
+                <Button
+                <!-- Botón Ingresar -->
+
+                </com.google.android.material.textfield.TextInputLayout>
+                        android:maxLines="1"/>
+                        android:inputType="textPassword"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/campoContrasena"
+                    <com.google.android.material.textfield.TextInputEditText
+
+                    app:endIconMode="password_toggle">
+                    app:startIconDrawable="@android:drawable/ic_lock_lock"
+                    android:hint="@string/contrasena"
+                    android:layout_marginBottom="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                <com.google.android.material.textfield.TextInputLayout
+                <!-- Campo Contraseña -->
+
+                </com.google.android.material.textfield.TextInputLayout>
+                        android:maxLines="1"/>
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/campoUsuario"
+                    <com.google.android.material.textfield.TextInputEditText
+
+                    app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+                    android:hint="@string/usuario"
+                    android:layout_marginBottom="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                <com.google.android.material.textfield.TextInputLayout
+                <!-- Campo Usuario -->
+
+                android:padding="24dp">
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+            <LinearLayout
+
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="24dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+        <com.google.android.material.card.MaterialCardView
+        <!-- Formulario de Login -->
+
+            android:layout_marginBottom="48dp"/>
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            android:text="@string/titulo_login"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+        <TextView
+
+            android:layout_marginBottom="8dp"/>
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:textSize="48sp"
+            android:text="GoRide"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+        <TextView
+        <!-- Logo o Título -->
+
+        android:padding="24dp">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+    <LinearLayout
+
+    android:background="#FFFFFF">
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+

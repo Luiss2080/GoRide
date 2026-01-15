@@ -3,8 +3,14 @@ package com.example.goride.modelo.entidades;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.ColumnInfo;
+import androidx.room.Index;
 
-@Entity(tableName = "servicios")
+@Entity(
+    tableName = "servicios",
+    indices = {
+        @Index(value = "nombre_servicio", unique = true)
+    }
+)
 public class Servicio {
 
     @PrimaryKey(autoGenerate = true)

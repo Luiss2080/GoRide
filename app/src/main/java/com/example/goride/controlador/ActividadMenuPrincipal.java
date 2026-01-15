@@ -3,7 +3,9 @@ package com.example.goride.controlador;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -119,6 +121,7 @@ public class ActividadMenuPrincipal extends AppCompatActivity {
      */
     private void cerrarSesion() {
         gestorSesion.cerrarSesion();
+        Toast.makeText(this, "Sesión cerrada exitosamente", Toast.LENGTH_SHORT).show();
         volverAlLogin();
     }
 

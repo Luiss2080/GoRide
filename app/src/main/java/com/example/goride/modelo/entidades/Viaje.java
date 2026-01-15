@@ -3,8 +3,39 @@ package com.example.goride.modelo.entidades;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.ColumnInfo;
+import androidx.room.ForeignKey;
+import androidx.room.Index;
 
-@Entity(tableName = "viajes")
+@Entity(
+    tableName = "viajes",
+    foreignKeys = {
+        @ForeignKey(
+            entity = Usuario.class,
+            parentColumns = "id_usuario",
+            childColumns = "id_usuario",
+            onDelete = ForeignKey.RESTRICT
+        ),
+        @ForeignKey(
+            entity = Conductor.class,
+            parentColumns = "id_conductor",
+            childColumns = "id_conductor",
+            onDelete = ForeignKey.RESTRICT
+        ),
+        @ForeignKey(
+            entity = Servicio.class,
+            parentColumns = "id_servicio",
+            childColumns = "id_servicio",
+            onDelete = ForeignKey.RESTRICT
+        )
+    },
+    indices = {
+        @Index(value = "id_usuario"),
+        @Index(value = "id_conductor"),
+        @Index(value = "id_servicio"),
+        @Index(value = "fecha_viaje"),
+        @Index(value = "estado")
+    }
+)
 public class Viaje {
 
     @PrimaryKey(autoGenerate = true)

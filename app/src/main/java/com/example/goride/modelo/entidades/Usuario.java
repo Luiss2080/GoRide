@@ -3,8 +3,26 @@ package com.example.goride.modelo.entidades;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.ColumnInfo;
+import androidx.room.ForeignKey;
+import androidx.room.Index;
 
-@Entity(tableName = "usuarios")
+/**
+ * Entidad que representa a un Usuario en el sistema GoRide
+ */
+@Entity(
+    tableName = "usuarios",
+    foreignKeys = @ForeignKey(
+        entity = Rol.class,
+        parentColumns = "id_rol",
+        childColumns = "id_rol",
+        onDelete = ForeignKey.RESTRICT
+    ),
+    indices = {
+        @Index(value = "nombre_usuario", unique = true),
+        @Index(value = "correo_electronico", unique = true),
+        @Index(value = "id_rol")
+    }
+)
 public class Usuario {
     
     @PrimaryKey(autoGenerate = true)
