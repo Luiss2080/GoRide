@@ -294,17 +294,18 @@ Cada módulo necesita:
 
 ## ESTADÍSTICAS DEL PROYECTO
 
-- **Total de archivos Java creados:** 25
-- **Total de archivos XML creados:** 5
-- **Total de líneas de código:** ~3,500+
-- **Número de clases:** 25
-- **Número de métodos:** ~200+
+- **Total de archivos Java creados:** 29
+- **Total de archivos XML creados:** 9
+- **Total de líneas de código:** ~4,200+
+- **Número de clases:** 29
+- **Número de métodos:** ~230+
 - **Tablas en BD:** 5
 - **Entidades Room:** 5
 - **DAOs:** 5
 - **Repositorios:** 5
-- **Activities:** 5
-- **Layouts:** 5
+- **Adaptadores:** 5 (organizados por módulo)
+- **Activities:** 4
+- **Layouts:** 9
 
 ---
 
