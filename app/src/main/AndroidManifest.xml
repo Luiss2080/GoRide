@@ -11,15 +11,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GoRide">
+
+        <!-- Activity Principal -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Activity de Login -->
+        <activity
+            android:name=".controlador.ActividadLogin"
+            android:exported="false" />
+
+        <!-- Activity de Menú Principal -->
+        <activity
+            android:name=".controlador.ActividadMenuPrincipal"
+            android:exported="false" />
+
+        <!-- Activities de Usuarios -->
+        <activity
+            android:name=".controlador.ActividadListaUsuarios"
+            android:exported="false" />
+
+        <activity
+            android:name=".controlador.ActividadFormularioUsuario"
+            android:exported="false" />
+
     </application>
 
 </manifest>

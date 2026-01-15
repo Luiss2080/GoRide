@@ -47,6 +47,12 @@ dependencies {
     implementation("androidx.room:room-runtime:2.6.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
 
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    // CardView
+    implementation("androidx.cardview:cardview:1.0.0")
+
     // Para encriptación de contraseñas
     implementation("org.mindrot:jbcrypt:0.4")
 
