@@ -1,100 +1,100 @@
 package com.example.goride.vista.adaptadores.usuario;
-}
-    }
-        }
-            });
-                }
-                    eventosUsuario.alEliminarUsuario(usuario);
-                if (eventosUsuario != null) {
-            botonEliminar.setOnClickListener(v -> {
 
-            });
-                }
-                    eventosUsuario.alEditarUsuario(usuario);
-                if (eventosUsuario != null) {
-            botonEditar.setOnClickListener(v -> {
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
-            textoTelefono.setText("Teléfono: " + usuario.getTelefono());
-            textoCorreo.setText("Correo: " + usuario.getCorreoElectronico());
-            textoNombreUsuario.setText("Usuario: " + usuario.getNombreUsuario());
-            textoNombreCompleto.setText(usuario.getNombreCompleto());
-        public void vincular(Usuario usuario) {
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
-        }
-            botonEliminar = itemView.findViewById(R.id.botonEliminar);
-            botonEditar = itemView.findViewById(R.id.botonEditar);
-            textoTelefono = itemView.findViewById(R.id.textoTelefono);
-            textoCorreo = itemView.findViewById(R.id.textoCorreo);
-            textoNombreUsuario = itemView.findViewById(R.id.textoNombreUsuario);
-            textoNombreCompleto = itemView.findViewById(R.id.textoNombreCompleto);
-
-            super(itemView);
-        public VistaUsuario(@NonNull View itemView) {
-
-        private Button botonEliminar;
-        private Button botonEditar;
-        private TextView textoTelefono;
-        private TextView textoCorreo;
-        private TextView textoNombreUsuario;
-        private TextView textoNombreCompleto;
-
-    class VistaUsuario extends RecyclerView.ViewHolder {
-     */
-     * ViewHolder para Usuario
-    /**
-
-    }
-        return usuarios.size();
-    public int getItemCount() {
-    @Override
-
-    }
-        holder.vincular(usuario);
-        Usuario usuario = usuarios.get(position);
-    public void onBindViewHolder(@NonNull VistaUsuario holder, int position) {
-    @Override
-
-    }
-        return new VistaUsuario(vista);
-            .inflate(R.layout.item_usuario, parent, false);
-        View vista = LayoutInflater.from(parent.getContext())
-    public VistaUsuario onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    @Override
-    @NonNull
-
-    }
-        this.eventosUsuario = eventosUsuario;
-        this.usuarios = usuarios;
-    public AdaptadorUsuario(List<Usuario> usuarios, EventosUsuario eventosUsuario) {
-
-    }
-        void alEliminarUsuario(Usuario usuario);
-        void alEditarUsuario(Usuario usuario);
-    public interface EventosUsuario {
-     */
-     * Interface para manejar eventos de usuario
-    /**
-
-    private EventosUsuario eventosUsuario;
-    private List<Usuario> usuarios;
-
-public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.VistaUsuario> {
- */
- * Adaptador para mostrar la lista de usuarios en un RecyclerView
-/**
+import com.example.goride.R;
+import com.example.goride.modelo.entidades.Usuario;
 
 import java.util.List;
 
-import com.example.goride.modelo.entidades.Usuario;
-import com.example.goride.R;
+/**
+ * Adaptador para mostrar la lista de usuarios en un RecyclerView
+ */
+public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.VistaUsuario> {
 
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.annotation.NonNull;
+    private List<Usuario> usuarios;
+    private EventosUsuario eventosUsuario;
 
-import android.widget.TextView;
-import android.widget.Button;
-import android.view.ViewGroup;
-import android.view.View;
-import android.view.LayoutInflater;
+    /**
+     * Interface para manejar eventos de usuario
+     */
+    public interface EventosUsuario {
+        void alEditarUsuario(Usuario usuario);
+        void alEliminarUsuario(Usuario usuario);
+    }
 
+    public AdaptadorUsuario(List<Usuario> usuarios, EventosUsuario eventosUsuario) {
+        this.usuarios = usuarios;
+        this.eventosUsuario = eventosUsuario;
+    }
+
+    @NonNull
+    @Override
+    public VistaUsuario onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View vista = LayoutInflater.from(parent.getContext())
+            .inflate(R.layout.item_usuario, parent, false);
+        return new VistaUsuario(vista);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull VistaUsuario holder, int position) {
+        Usuario usuario = usuarios.get(position);
+        holder.vincular(usuario);
+    }
+
+    @Override
+    public int getItemCount() {
+        return usuarios.size();
+    }
+
+    /**
+     * ViewHolder para Usuario
+     */
+    class VistaUsuario extends RecyclerView.ViewHolder {
+
+        private TextView textoNombreCompleto;
+        private TextView textoNombreUsuario;
+        private TextView textoCorreo;
+        private TextView textoTelefono;
+        private Button botonEditar;
+        private Button botonEliminar;
+
+        public VistaUsuario(@NonNull View itemView) {
+            super(itemView);
+
+            textoNombreCompleto = itemView.findViewById(R.id.textoNombreCompleto);
+            textoNombreUsuario = itemView.findViewById(R.id.textoNombreUsuario);
+            textoCorreo = itemView.findViewById(R.id.textoCorreo);
+            textoTelefono = itemView.findViewById(R.id.textoTelefono);
+            botonEditar = itemView.findViewById(R.id.botonEditar);
+            botonEliminar = itemView.findViewById(R.id.botonEliminar);
+        }
+
+        public void vincular(Usuario usuario) {
+            textoNombreCompleto.setText(usuario.getNombreCompleto());
+            textoNombreUsuario.setText("Usuario: " + usuario.getNombreUsuario());
+            textoCorreo.setText("Correo: " + usuario.getCorreoElectronico());
+            textoTelefono.setText("Teléfono: " + usuario.getTelefono());
+
+            botonEditar.setOnClickListener(v -> {
+                if (eventosUsuario != null) {
+                    eventosUsuario.alEditarUsuario(usuario);
+                }
+            });
+
+            botonEliminar.setOnClickListener(v -> {
+                if (eventosUsuario != null) {
+                    eventosUsuario.alEliminarUsuario(usuario);
+                }
+            });
+        }
+    }
+}
 

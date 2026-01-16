@@ -1,124 +1,102 @@
 package com.example.goride.controlador.usuario;
-}
-    }
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
-    private void mostrarMensaje(String mensaje) {
-     */
-     * Muestra un mensaje Toast
-    /**
 
-    }
-            .show();
-            .setNegativeButton(getString(R.string.no), null)
-            })
-                cargarUsuarios();
-                mostrarMensaje(getString(R.string.mensaje_exito_eliminar));
-                repositorioUsuario.eliminar(usuario);
-            .setPositiveButton(getString(R.string.si), (dialog, which) -> {
-            .setMessage(getString(R.string.mensaje_confirmacion_eliminar))
-            .setTitle("Confirmar eliminación")
-        new AlertDialog.Builder(this)
-    public void alEliminarUsuario(Usuario usuario) {
-    @Override
-     */
-     * Elimina un usuario
-    /**
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Toast;
 
-    }
-        startActivity(intent);
-        intent.putExtra("idUsuario", usuario.getIdUsuario());
-        Intent intent = new Intent(this, ActividadFormularioUsuario.class);
-    public void alEditarUsuario(Usuario usuario) {
-    @Override
-     */
-     * Abre el formulario para editar usuario
-    /**
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-    }
-        startActivity(intent);
-        Intent intent = new Intent(this, ActividadFormularioUsuario.class);
-    private void abrirFormularioCrear() {
-     */
-     * Abre el formulario para crear usuario
-    /**
-
-    }
-        listaUsuarios.setAdapter(adaptador);
-        adaptador = new AdaptadorUsuario(usuarios, this);
-        usuarios = repositorioUsuario.obtenerTodos();
-    private void cargarUsuarios() {
-     */
-     * Carga la lista de usuarios
-    /**
-
-    }
-        botonCrear.setOnClickListener(v -> abrirFormularioCrear());
-        botonVolver.setOnClickListener(v -> finish());
-    private void configurarEventos() {
-     */
-     * Configura los eventos
-    /**
-
-    }
-        listaUsuarios.setLayoutManager(new LinearLayoutManager(this));
-
-        listaUsuarios = findViewById(R.id.listaUsuarios);
-        botonCrear = findViewById(R.id.botonCrear);
-        botonVolver = findViewById(R.id.botonVolver);
-        textoTitulo = findViewById(R.id.textoTitulo);
-    private void inicializarVistas() {
-     */
-     * Inicializa las vistas
-    /**
-
-    }
-        cargarUsuarios();
-        super.onResume();
-    protected void onResume() {
-    @Override
-
-    }
-        cargarUsuarios();
-        configurarEventos();
-        inicializarVistas();
-
-        repositorioUsuario = new RepositorioUsuario(this);
-
-        setContentView(R.layout.activity_lista_usuarios);
-        super.onCreate(savedInstanceState);
-    protected void onCreate(Bundle savedInstanceState) {
-    @Override
-
-    private List<Usuario> usuarios;
-    private AdaptadorUsuario adaptador;
-    private RepositorioUsuario repositorioUsuario;
-
-    private RecyclerView listaUsuarios;
-    private Button botonCrear;
-    private Button botonVolver;
-    private TextView textoTitulo;
-
-public class ActividadListaUsuarios extends AppCompatActivity implements AdaptadorUsuario.EventosUsuario {
- */
- * Controlador para la lista de usuarios
-/**
+import com.example.goride.R;
+import com.example.goride.modelo.entidades.Usuario;
+import com.example.goride.modelo.repositorios.RepositorioUsuario;
+import com.example.goride.vista.adaptadores.usuario.AdaptadorUsuario;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
-import com.example.goride.modelo.repositorio.RepositorioUsuario;
-import com.example.goride.modelo.entidades.Usuario;
-import com.example.goride.vista.adaptadores.usuario.AdaptadorUsuario;
-import com.example.goride.R;
+/**
+ * Actividad para listar usuarios
+ */
+public class ActividadListaUsuarios extends AppCompatActivity implements AdaptadorUsuario.EventosUsuario {
 
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AlertDialog;
+    private RecyclerView listaUsuarios;
+    private FloatingActionButton botonAgregar;
+    private RepositorioUsuario repositorioUsuario;
+    private AdaptadorUsuario adaptador;
+    private List<Usuario> usuarios;
 
-import android.widget.Toast;
-import android.widget.TextView;
-import android.widget.Button;
-import android.os.Bundle;
-import android.content.Intent;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_lista_usuarios);
 
+        repositorioUsuario = new RepositorioUsuario(this);
+
+        listaUsuarios = findViewById(R.id.listaUsuarios);
+        listaUsuarios.setLayoutManager(new LinearLayoutManager(this));
+
+        botonAgregar = findViewById(R.id.botonAgregar);
+        botonAgregar.setOnClickListener(v -> abrirFormularioCrear());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        cargarUsuarios();
+    }
+
+    /**
+     * Carga la lista de usuarios
+     */
+    private void cargarUsuarios() {
+        usuarios = repositorioUsuario.obtenerTodos();
+        adaptador = new AdaptadorUsuario(usuarios, this);
+        listaUsuarios.setAdapter(adaptador);
+    }
+
+    /**
+     * Abre el formulario para crear usuario
+     */
+    private void abrirFormularioCrear() {
+        Intent intent = new Intent(this, ActividadFormularioUsuario.class);
+        startActivity(intent);
+    }
+
+    /**
+     * Abre el formulario para editar usuario
+     */
+    @Override
+    public void alEditarUsuario(Usuario usuario) {
+        Intent intent = new Intent(this, ActividadFormularioUsuario.class);
+        intent.putExtra("idUsuario", usuario.getIdUsuario());
+        startActivity(intent);
+    }
+
+    /**
+     * Elimina un usuario
+     */
+    @Override
+    public void alEliminarUsuario(Usuario usuario) {
+        new AlertDialog.Builder(this)
+            .setTitle("Confirmar eliminación")
+            .setMessage(getString(R.string.mensaje_confirmacion_eliminar))
+            .setPositiveButton(getString(R.string.si), (dialog, which) -> {
+                repositorioUsuario.eliminar(usuario);
+                mostrarMensaje(getString(R.string.mensaje_exito_eliminar));
+                cargarUsuarios();
+            })
+            .setNegativeButton(getString(R.string.no), null)
+            .show();
+    }
+
+    /**
+     * Muestra un mensaje Toast
+     */
+    private void mostrarMensaje(String mensaje) {
+        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
+    }
+}
 
