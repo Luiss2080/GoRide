@@ -3,53 +3,53 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Tema Rojo Oscuro Elegante - Tech Home Style -->
-    <color name="red_primary_dark">#8B1538</color>          <!-- Rojo oscuro principal -->
-    <color name="red_primary">#B91C3C</color>               <!-- Rojo medio -->
-    <color name="red_accent">#DC2626</color>                <!-- Rojo vibrante para botones -->
-    <color name="red_light">#F87171</color>                 <!-- Rojo claro para acentos -->
+    <!-- Tema Rojo Oscuro Elegante Tech Home Style -->
+    <color name="red_primary_dark">#8B1538</color>
+    <color name="red_primary">#B91C3C</color>
+    <color name="red_accent">#DC2626</color>
+    <color name="red_light">#F87171</color>
 
     <!-- Tonalidades Negras y Grises Oscuros -->
-    <color name="black_primary">#0F0F0F</color>             <!-- Negro principal -->
-    <color name="black_secondary">#1A1A1A</color>           <!-- Negro secundario -->
-    <color name="gray_dark">#2D2D2D</color>                 <!-- Gris oscuro -->
-    <color name="gray_medium">#404040</color>               <!-- Gris medio -->
-    <color name="gray_light">#6B7280</color>                <!-- Gris claro para textos -->
+    <color name="black_primary">#0F0F0F</color>
+    <color name="black_secondary">#1A1A1A</color>
+    <color name="gray_dark">#2D2D2D</color>
+    <color name="gray_medium">#404040</color>
+    <color name="gray_light">#6B7280</color>
 
     <!-- Colores de gradiente oscuro -->
-    <color name="gradient_dark_start">#8B1538</color>       <!-- Inicio degradado oscuro -->
-    <color name="gradient_dark_middle">#6B1429</color>      <!-- Medio degradado oscuro -->
-    <color name="gradient_dark_end">#1A1A1A</color>         <!-- Final degradado oscuro -->
+    <color name="gradient_dark_start">#8B1538</color>
+    <color name="gradient_dark_middle">#6B1429</color>
+    <color name="gradient_dark_end">#1A1A1A</color>
 
     <!-- Gradiente para botones -->
-    <color name="button_gradient_start">#DC2626</color>     <!-- Rojo vibrante inicio -->
-    <color name="button_gradient_end">#B91C3C</color>       <!-- Rojo medio final -->
+    <color name="button_gradient_start">#DC2626</color>
+    <color name="button_gradient_end">#B91C3C</color>
 
     <!-- Colores para UI -->
-    <color name="background_primary">#0F0F0F</color>        <!-- Fondo principal negro -->
-    <color name="background_secondary">#1A1A1A</color>      <!-- Fondo secundario -->
-    <color name="surface_color">#2D2D2D</color>             <!-- Color de superficies -->
-    <color name="card_background">#1E1E1E</color>           <!-- Fondo de tarjetas */
+    <color name="background_primary">#0F0F0F</color>
+    <color name="background_secondary">#1A1A1A</color>
+    <color name="surface_color">#2D2D2D</color>
+    <color name="card_background">#1E1E1E</color>
 
     <!-- Textos -->
-    <color name="text_primary">#FFFFFF</color>              <!-- Texto principal blanco -->
-    <color name="text_secondary">#D1D5DB</color>            <!-- Texto secundario gris claro -->
-    <color name="text_muted">#9CA3AF</color>                <!-- Texto atenuado -->
-    <color name="text_on_red">#FFFFFF</color>               <!-- Texto sobre rojo -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#D1D5DB</color>
+    <color name="text_muted">#9CA3AF</color>
+    <color name="text_on_red">#FFFFFF</color>
 
     <!-- Estados y acentos -->
-    <color name="accent_primary">#DC2626</color>            <!-- Acento principal -->
-    <color name="accent_secondary">#8B1538</color>          <!-- Acento secundario -->
-    <color name="shadow_color">#80000000</color>            <!-- Sombra -->
-    <color name="border_color">#404040</color>              <!-- Bordes -->
+    <color name="accent_primary">#DC2626</color>
+    <color name="accent_secondary">#8B1538</color>
+    <color name="shadow_color">#80000000</color>
+    <color name="border_color">#404040</color>
 
     <!-- Estados interactivos -->
-    <color name="ripple_light">#40FFFFFF</color>            <!-- Ripple claro -->
-    <color name="ripple_dark">#40000000</color>             <!-- Ripple oscuro -->
+    <color name="ripple_light">#40FFFFFF</color>
+    <color name="ripple_dark">#40000000</color>
 
     <!-- Colores de estado -->
-    <color name="success">#10B981</color>                   <!-- Verde éxito -->
-    <color name="warning">#F59E0B</color>                   <!-- Amarillo advertencia -->
-    <color name="error">#EF4444</color>                     <!-- Rojo error -->
-    <color name="info">#3B82F6</color>                      <!-- Azul información -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="error">#EF4444</color>
+    <color name="info">#3B82F6</color>
 </resources>
