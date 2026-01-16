@@ -49,6 +49,7 @@ public class ActividadLogin extends AppCompatActivity {
 
         inicializarVistas();
         configurarEventos();
+        iniciarAnimaciones();
     }
 
     /**
@@ -58,6 +59,16 @@ public class ActividadLogin extends AppCompatActivity {
         campoUsuario = findViewById(R.id.campoUsuario);
         campoContrasena = findViewById(R.id.campoContrasena);
         botonIngresar = findViewById(R.id.botonIngresar);
+
+        // Buscar las vistas por su parent o crear referencias
+        iconoHeader = findViewById(R.id.iconoHeader);
+        if (iconoHeader == null) {
+            // Si no tiene ID, buscar la primera CardView
+            View rootView = findViewById(android.R.id.content);
+            if (rootView instanceof android.view.ViewGroup) {
+                iconoHeader = encontrarPrimeraCardView((android.view.ViewGroup) rootView);
+            }
+        }
     }
 
     /**
