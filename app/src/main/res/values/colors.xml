@@ -2,4 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Tema Rojo Degradado Moderno -->
+    <color name="red_primary">#E74C3C</color>
+    <color name="red_primary_dark">#C0392B</color>
+    <color name="red_secondary">#F1948A</color>
+    <color name="red_light">#FADBD8</color>
+    <color name="red_accent">#FF5722</color>
+
+    <!-- Colores de gradiente -->
+    <color name="gradient_start">#E74C3C</color>
+    <color name="gradient_middle">#EC7063</color>
+    <color name="gradient_end">#F1948A</color>
+
+    <!-- Colores neutros modernos -->
+    <color name="background_light">#FDFEFE</color>
+    <color name="text_primary">#2C3E50</color>
+    <color name="text_secondary">#5D6D7E</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="shadow_color">#1A000000</color>
 </resources>

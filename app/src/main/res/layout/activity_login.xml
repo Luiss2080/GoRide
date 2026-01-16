@@ -1,97 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#FFFFFF">
-    <LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/red_gradient_bg">
+
+    <!-- Espaciado superior -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Header con ícono -->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@android:drawable/ic_menu_mylocation"
+        android:layout_marginBottom="24dp"
+        app:tint="#FFFFFF"
+        android:contentDescription="@string/app_name" />
+
+    <!-- Título principal -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo_login"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Subtítulo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestión de Inventario del negocio de sus sueños"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:alpha="0.9"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- Card del formulario -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="24dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GoRide"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/holo_blue_dark"
-            android:layout_marginBottom="8dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/titulo_login"
-            android:textSize="20sp"
-            android:textColor="@android:color/darker_gray"
-            android:layout_marginBottom="48dp"/>
-        <com.google.android.material.card.MaterialCardView
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="32dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="12dp">
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <!-- Título de bienvenida -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenido Nuevamente"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Subtítulo de acceso -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accede a tu cuenta desde el lugar que necesites"
+                android:textSize="14sp"
+                android:textColor="#5D6D7E"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"/>
+
+            <!-- Campo de usuario -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="@string/usuario"
+                app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                app:startIconTint="#E74C3C"
+                app:boxStrokeColor="#E74C3C"
+                app:hintTextColor="#E74C3C"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="#2C3E50"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Campo de contraseña -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="@string/contrasena"
+                app:startIconDrawable="@android:drawable/ic_lock_lock"
+                app:startIconTint="#E74C3C"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="#E74C3C"
+                app:hintTextColor="#E74C3C"
+                app:endIconTint="#E74C3C"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/campoContrasena"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="#2C3E50"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Mensaje informativo -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp">
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="32dp"
+                android:background="#F8F9FA"
+                android:padding="12dp"
+                android:layout_marginHorizontal="4dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                android:src="@android:drawable/ic_dialog_info"
+                android:layout_marginEnd="8dp"
+                app:tint="#E74C3C"
+                android:contentDescription="Información" />
+
+                <TextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:hint="@string/usuario"
-                    app:startIconDrawable="@android:drawable/ic_menu_myplaces">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/campoUsuario"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text"
-                        android:maxLines="1"/>
-                </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:hint="@string/contrasena"
-                    app:startIconDrawable="@android:drawable/ic_lock_lock"
-                    app:endIconMode="password_toggle">
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/campoContrasena"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPassword"
-                        android:maxLines="1"/>
-                </com.google.android.material.textfield.TextInputLayout>
-                <Button
-                    android:id="@+id/botonIngresar"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:text="@string/boton_ingresar"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:backgroundTint="@android:color/holo_blue_dark"/>
+                    android:layout_weight="1"
+                    android:text="Ingresa tus credenciales para continuar"
+                    android:textSize="12sp"
+                    android:textColor="#5D6D7E"/>
+
             </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Usuarios de Prueba:"
-            android:textStyle="bold"
-            android:textSize="14sp"
-            android:layout_marginTop="16dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="admin / admin123"
-            android:textSize="12sp"
-            android:layout_marginTop="4dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="juan_perez / cliente123"
-            android:textSize="12sp"
-            android:layout_marginTop="2dp"/>
-    </LinearLayout>
-</ScrollView>
+
+            <!-- Botón de ingresar -->
+            <Button
+                android:id="@+id/botonIngresar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/boton_ingresar"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/red_button_gradient"
+                android:textAllCaps="false"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Espaciado flexible -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5" />
+
+    <!-- Información de versión -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AppVibras v1.0 - Sistema de Gestión"
+        android:textSize="12sp"
+        android:textColor="#FFFFFF"
+        android:alpha="0.8"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Usuarios de prueba -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuarios de Prueba:"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="admin / admin123"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:alpha="0.8"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="juan_perez / cliente123"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:alpha="0.8"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>

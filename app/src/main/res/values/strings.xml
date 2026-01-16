@@ -3,13 +3,18 @@
     <string name="app_name">GoRide</string>
 
     <!-- Login -->
-    <string name="titulo_login">Iniciar SesiÃ³n</string>
-    <string name="usuario">Usuario</string>
-    <string name="contrasena">ContraseÃ±a</string>
+    <string name="titulo_login">Inicio de Sesión</string>
+    <string name="subtitle_login">Gestión de Inventario del negocio de sus sueños</string>
+    <string name="welcome_back">Bienvenido Nuevamente</string>
+    <string name="access_account">Accede a tu cuenta desde el lugar que necesites</string>
+    <string name="enter_credentials">Ingresa tus credenciales para continuar</string>
+    <string name="usuario">Nombre de usuario</string>
+    <string name="contrasena">Contraseña</string>
     <string name="boton_ingresar">Ingresar</string>
     <string name="boton_registrar">Registrarse</string>
     <string name="error_credenciales">Credenciales incorrectas</string>
     <string name="error_campos_vacios">Por favor complete todos los campos</string>
+    <string name="app_version">AppVibras v1.0 - Sistema de Gestión</string>
 
     <!-- MenÃº Principal -->
     <string name="titulo_menu_principal">MenÃº Principal</string>
