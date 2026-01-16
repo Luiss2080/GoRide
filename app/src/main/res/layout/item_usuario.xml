@@ -19,30 +19,31 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:text="Nombre Completo" />
+            android:text="@string/nombre_completo" />
 
         <TextView
             android:id="@+id/textoNombreUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Usuario" />
+            android:text="@string/usuario" />
 
         <TextView
             android:id="@+id/textoCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Correo" />
+            android:text="@string/correo_electronico" />
 
         <TextView
             android:id="@+id/textoTelefono"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Teléfono" />
+            android:text="@string/telefono" />
 
         <LinearLayout
+            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -50,6 +51,7 @@
 
             <Button
                 android:id="@+id/botonEditar"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,6 +60,7 @@
 
             <Button
                 android:id="@+id/botonEliminar"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

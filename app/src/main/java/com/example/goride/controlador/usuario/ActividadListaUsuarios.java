@@ -2,6 +2,7 @@ package com.example.goride.controlador.usuario;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -13,7 +14,6 @@ import com.example.goride.R;
 import com.example.goride.modelo.entidades.Usuario;
 import com.example.goride.modelo.repositorio.RepositorioUsuario;
 import com.example.goride.vista.adaptadores.usuario.AdaptadorUsuario;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
 
@@ -23,10 +23,7 @@ import java.util.List;
 public class ActividadListaUsuarios extends AppCompatActivity implements AdaptadorUsuario.EventosUsuario {
 
     private RecyclerView listaUsuarios;
-    private FloatingActionButton botonAgregar;
     private RepositorioUsuario repositorioUsuario;
-    private AdaptadorUsuario adaptador;
-    private List<Usuario> usuarios;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +35,8 @@ public class ActividadListaUsuarios extends AppCompatActivity implements Adaptad
         listaUsuarios = findViewById(R.id.listaUsuarios);
         listaUsuarios.setLayoutManager(new LinearLayoutManager(this));
 
-        botonAgregar = findViewById(R.id.botonAgregar);
-        botonAgregar.setOnClickListener(v -> abrirFormularioCrear());
+        Button botonCrear = findViewById(R.id.botonCrear);
+        botonCrear.setOnClickListener(v -> abrirFormularioCrear());
     }
 
     @Override
@@ -52,8 +49,8 @@ public class ActividadListaUsuarios extends AppCompatActivity implements Adaptad
      * Carga la lista de usuarios
      */
     private void cargarUsuarios() {
-        usuarios = repositorioUsuario.obtenerTodos();
-        adaptador = new AdaptadorUsuario(usuarios, this);
+        List<Usuario> usuarios = repositorioUsuario.obtenerTodos();
+        AdaptadorUsuario adaptador = new AdaptadorUsuario(usuarios, this);
         listaUsuarios.setAdapter(adaptador);
     }
 

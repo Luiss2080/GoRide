@@ -1,11 +1,11 @@
-ackage com.example.goride.modelo.repositorio;
+package com.example.goride.modelo.repositorio;
 import android.content.Context;
 import com.example.goride.modelo.basedatos.BaseDatosGoRide;
 import com.example.goride.modelo.dao.UsuarioDao;
 import com.example.goride.modelo.entidades.Usuario;
 import java.util.List;
 public class RepositorioUsuario {
-    private UsuarioDao usuarioDao;
+    private final UsuarioDao usuarioDao;
     public RepositorioUsuario(Context contexto) {
         BaseDatosGoRide baseDatos = BaseDatosGoRide.obtenerInstancia(contexto);
         this.usuarioDao = baseDatos.usuarioDao();
