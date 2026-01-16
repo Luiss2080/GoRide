@@ -1,4 +1,4 @@
-﻿package com.example.goride.modelo.repositorio;
+ackage com.example.goride.modelo.repositorio;
 import android.content.Context;
 import com.example.goride.modelo.basedatos.BaseDatosGoRide;
 import com.example.goride.modelo.dao.UsuarioDao;

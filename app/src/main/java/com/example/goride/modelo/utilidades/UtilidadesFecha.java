@@ -1,4 +1,4 @@
-﻿package com.example.goride.modelo.utilidades;
+ackage com.example.goride.modelo.utilidades;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
