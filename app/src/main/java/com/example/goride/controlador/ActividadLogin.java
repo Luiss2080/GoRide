@@ -75,7 +75,49 @@ public class ActividadLogin extends AppCompatActivity {
      * Configura los eventos de los componentes
      */
     private void configurarEventos() {
-        botonIngresar.setOnClickListener(v -> iniciarSesion());
+        // Evento del botón con animación
+        botonIngresar.setOnClickListener(v -> {
+            animarBoton(v);
+            // Delay para la animación antes de procesar
+            new Handler().postDelayed(this::iniciarSesion, 150);
+        });
+
+        // Validación en tiempo real para campos
+        configurarValidacionTiempoReal();
+    }
+
+    /**
+     * Configura la validación en tiempo real de los campos
+     */
+    private void configurarValidacionTiempoReal() {
+        TextWatcher validador = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                validarCamposYActivarBoton();
+            }
+        };
+
+        campoUsuario.addTextChangedListener(validador);
+        campoContrasena.addTextChangedListener(validador);
+    }
+
+    /**
+     * Valida los campos y activa/desactiva el botón
+     */
+    private void validarCamposYActivarBoton() {
+        String usuario = campoUsuario.getText().toString().trim();
+        String contrasena = campoContrasena.getText().toString().trim();
+
+        boolean camposValidos = !usuario.isEmpty() && !contrasena.isEmpty() && contrasena.length() >= 3;
+
+        botonIngresar.setEnabled(camposValidos);
+        botonIngresar.setAlpha(camposValidos ? 1.0f : 0.6f);
     }
 
     /**
