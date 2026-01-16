@@ -3,6 +3,7 @@ package com.example.goride.controlador;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class ActividadLogin extends AppCompatActivity {
 
     private RepositorioUsuario repositorioUsuario;
     private GestorSesion gestorSesion;
-    private Handler handler = new Handler();
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,10 +90,14 @@ public class ActividadLogin extends AppCompatActivity {
     private void configurarValidacionTiempoReal() {
         TextWatcher validador = new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // No se requiere implementación para este caso
+            }
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // No se requiere implementación para este caso
+            }
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -186,12 +191,12 @@ public class ActividadLogin extends AppCompatActivity {
                 .scaleX(0.95f)
                 .scaleY(0.95f)
                 .setDuration(100)
-                .withEndAction(() -> {
+                .withEndAction(() ->
                     boton.animate()
                             .scaleX(1.0f)
                             .scaleY(1.0f)
                             .setDuration(100)
-                            .start();
-                }).start();
+                            .start()
+                ).start();
     }
 }
