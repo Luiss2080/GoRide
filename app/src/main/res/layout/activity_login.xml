@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:text="Gestión de Inventario del negocio de sus sueños"
         android:textSize="14sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#D1D5DB"
         android:alpha="0.9"
         android:gravity="center"
         android:layout_marginBottom="40dp"/>
@@ -50,9 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="32dp"
-        app:cardElevation="12dp"
+        app:cardElevation="16dp"
         app:cardCornerRadius="20dp"
-        app:cardBackgroundColor="#FFFFFF">
+        app:cardBackgroundColor="#1E1E1E">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 android:text="Bienvenido Nuevamente"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#2C3E50"
+                android:textColor="#FFFFFF"
                 android:layout_gravity="center"
                 android:layout_marginBottom="8dp"/>
 
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:text="Accede a tu cuenta desde el lugar que necesites"
                 android:textSize="14sp"
-                android:textColor="#5D6D7E"
+                android:textColor="#D1D5DB"
                 android:layout_gravity="center"
                 android:layout_marginBottom="32dp"/>
 
@@ -87,10 +87,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:hint="@string/usuario"
-                app:startIconDrawable="@android:drawable/ic_menu_myplaces"
-                app:startIconTint="#E74C3C"
-                app:boxStrokeColor="#E74C3C"
-                app:hintTextColor="#E74C3C"
+                app:startIconDrawable="@drawable/ic_user_red"
+                app:startIconTint="#DC2626"
+                app:boxStrokeColor="#DC2626"
+                app:hintTextColor="#DC2626"
+                app:boxBackgroundColor="#2D2D2D"
                 app:boxCornerRadiusTopStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
@@ -102,7 +103,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textColor="#2C3E50"/>
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#9CA3AF"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,12 +114,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 android:hint="@string/contrasena"
-                app:startIconDrawable="@android:drawable/ic_lock_lock"
-                app:startIconTint="#E74C3C"
+                app:startIconDrawable="@drawable/ic_lock_red"
+                app:startIconTint="#DC2626"
                 app:endIconMode="password_toggle"
-                app:boxStrokeColor="#E74C3C"
-                app:hintTextColor="#E74C3C"
-                app:endIconTint="#E74C3C"
+                app:boxStrokeColor="#DC2626"
+                app:hintTextColor="#DC2626"
+                app:endIconTint="#DC2626"
+                app:boxBackgroundColor="#2D2D2D"
                 app:boxCornerRadiusTopStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
@@ -129,7 +132,8 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:textColor="#2C3E50"/>
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#9CA3AF"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,17 +144,17 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="32dp"
-                android:background="#F8F9FA"
+                android:background="#2D2D2D"
                 android:padding="12dp"
                 android:layout_marginHorizontal="4dp">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                android:src="@android:drawable/ic_dialog_info"
-                android:layout_marginEnd="8dp"
-                app:tint="#E74C3C"
-                android:contentDescription="Información" />
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:layout_marginEnd="8dp"
+                    app:tint="#DC2626"
+                    android:contentDescription="Información" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -158,7 +162,7 @@
                     android:layout_weight="1"
                     android:text="Ingresa tus credenciales para continuar"
                     android:textSize="12sp"
-                    android:textColor="#5D6D7E"/>
+                    android:textColor="#D1D5DB"/>
 
             </LinearLayout>
 
@@ -173,6 +177,7 @@
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button_gradient"
                 android:textAllCaps="false"
+                android:elevation="8dp"
                 android:layout_marginBottom="16dp"/>
 
         </LinearLayout>
@@ -189,9 +194,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AppVibras v1.0 - Sistema de Gestión"
+        android:text="GoRide v1.0 - Sistema de Gestión"
         android:textSize="12sp"
-        android:textColor="#FFFFFF"
+        android:textColor="#D1D5DB"
         android:alpha="0.8"
         android:layout_marginBottom="16dp"/>
 
@@ -208,7 +213,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="admin / admin123"
-        android:textColor="#FFFFFF"
+        android:textColor="#D1D5DB"
         android:textSize="12sp"
         android:alpha="0.8"
         android:layout_marginTop="4dp"/>
@@ -217,7 +222,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="juan_perez / cliente123"
-        android:textColor="#FFFFFF"
+        android:textColor="#D1D5DB"
         android:textSize="12sp"
         android:alpha="0.8"
         android:layout_marginTop="2dp"/>

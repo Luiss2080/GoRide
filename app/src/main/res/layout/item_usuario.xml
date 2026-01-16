@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/card_background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:textColor="@color/text_primary"
             android:text="@string/nombre_completo" />
 
         <TextView
@@ -26,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
             android:text="@string/usuario" />
 
         <TextView
@@ -33,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
             android:text="@string/correo_electronico" />
 
         <TextView
@@ -40,6 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary"
             android:text="@string/telefono" />
 
         <LinearLayout
@@ -56,6 +61,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/red_accent"
+                android:textColor="@color/white"
                 android:text="@string/boton_editar" />
 
             <Button
@@ -64,7 +71,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_red_dark"
+                android:backgroundTint="@color/error"
+                android:textColor="@color/white"
                 android:text="@string/boton_eliminar" />
 
         </LinearLayout>
