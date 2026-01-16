@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.goride.R;
 import com.example.goride.modelo.entidades.Usuario;
-import com.example.goride.modelo.repositorios.RepositorioUsuario;
+import com.example.goride.modelo.repositorio.RepositorioUsuario;
 import com.example.goride.vista.adaptadores.usuario.AdaptadorUsuario;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
