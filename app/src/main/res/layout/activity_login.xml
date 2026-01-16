@@ -5,32 +5,41 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/gradient_background"
+    android:animateLayoutChanges="true">
 
-    <!-- Espaciado superior -->
+    <!-- Espaciado superior flexible -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1.5" />
 
-    <!-- Header con ícono -->
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@android:drawable/ic_menu_mylocation"
-        android:layout_marginBottom="24dp"
-        app:tint="#FFFFFF"
-        android:contentDescription="@string/app_name" />
+    <!-- Header con ícono mejorado -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="@color/white">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_menu_mylocation"
+            app:tint="#B91C3C"
+            android:contentDescription="@string/app_name" />
+    </androidx.cardview.widget.CardView>
 
     <!-- Título principal -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/titulo_login"
-        android:textSize="28sp"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="#1A1A1A"
+        android:textColor="#FFFFFF"
         android:layout_marginBottom="8dp"/>
 
     <!-- Subtítulo -->
@@ -38,20 +47,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gestión de Inventario del negocio de sus sueños"
-        android:textSize="14sp"
-        android:textColor="#2D2D2D"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
         android:alpha="0.9"
         android:gravity="center"
-        android:layout_marginBottom="40dp"/>
+        android:layout_marginBottom="48dp"
+        android:layout_marginHorizontal="32dp"/>
 
     <!-- Card del formulario -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
+        android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="32dp"
         app:cardElevation="16dp"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="24dp">
         app:cardBackgroundColor="#FFFFFF">
 
         <LinearLayout
@@ -65,7 +75,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bienvenido Nuevamente"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#1A1A1A"
                 android:layout_gravity="center"
@@ -77,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:text="Accede a tu cuenta desde el lugar que necesites"
                 android:textSize="14sp"
-                android:textColor="#2D2D2D"
+                android:textColor="#6B7280"
                 android:layout_gravity="center"
                 android:layout_marginBottom="32dp"/>
 
@@ -85,26 +95,30 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="24dp"
                 android:hint="@string/usuario"
                 app:startIconDrawable="@drawable/ic_user_red"
                 app:startIconTint="#DC2626"
                 app:boxStrokeColor="#DC2626"
                 app:hintTextColor="#DC2626"
-                app:boxBackgroundColor="#F5F5F5"
-                app:boxCornerRadiusTopStart="12dp"
-                app:boxCornerRadiusTopEnd="12dp"
-                app:boxCornerRadiusBottomStart="12dp"
-                app:boxCornerRadiusBottomEnd="12dp">
+                app:boxBackgroundColor="#F9FAFB"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoUsuario"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="56dp"
                     android:inputType="text"
                     android:maxLines="1"
                     android:textColor="#1A1A1A"
-                    android:textColorHint="#6B7280"/>
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,7 +126,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="32dp"
                 android:hint="@string/contrasena"
                 app:startIconDrawable="@drawable/ic_lock_red"
                 app:startIconTint="#DC2626"
@@ -120,20 +134,24 @@
                 app:boxStrokeColor="#DC2626"
                 app:hintTextColor="#DC2626"
                 app:endIconTint="#DC2626"
-                app:boxBackgroundColor="#F5F5F5"
-                app:boxCornerRadiusTopStart="12dp"
-                app:boxCornerRadiusTopEnd="12dp"
-                app:boxCornerRadiusBottomStart="12dp"
-                app:boxCornerRadiusBottomEnd="12dp">
+                app:boxBackgroundColor="#F9FAFB"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/campoContrasena"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="56dp"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:textColor="#1A1A1A"
-                    android:textColorHint="#6B7280"/>
+                    android:textColorHint="#9CA3AF"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -172,7 +190,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:text="@string/boton_ingresar"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/button_gradient"
@@ -184,11 +202,11 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- Espaciado flexible -->
+    <!-- Espaciado inferior flexible -->
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5" />
+        android:layout_weight="2" />
 
     <!-- Información de versión -->
     <TextView
@@ -196,35 +214,8 @@
         android:layout_height="wrap_content"
         android:text="GoRide v1.0 - Sistema de Gestión"
         android:textSize="12sp"
-        android:textColor="#D1D5DB"
-        android:alpha="0.8"
-        android:layout_marginBottom="16dp"/>
-
-    <!-- Usuarios de prueba -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Usuarios de Prueba:"
-        android:textStyle="bold"
         android:textColor="#FFFFFF"
-        android:textSize="14sp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="admin / admin123"
-        android:textColor="#D1D5DB"
-        android:textSize="12sp"
         android:alpha="0.8"
-        android:layout_marginTop="4dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="juan_perez / cliente123"
-        android:textColor="#D1D5DB"
-        android:textSize="12sp"
-        android:alpha="0.8"
-        android:layout_marginTop="2dp"/>
+        android:layout_marginBottom="32dp"/>
 
 </LinearLayout>
