@@ -167,4 +167,88 @@ public class ActividadLogin extends AppCompatActivity {
     private void mostrarMensaje(String mensaje) {
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
+
+    /**
+     * Inicia las animaciones de entrada
+     */
+    private void iniciarAnimaciones() {
+        // Encontrar todas las vistas
+        View rootView = findViewById(android.R.id.content);
+
+        // Inicialmente ocultar las vistas para animación
+        if (iconoHeader != null) {
+            iconoHeader.setAlpha(0f);
+            iconoHeader.setTranslationY(50f);
+        }
+
+        // Animar secuencialmente
+        animarElementosEntrada();
+    }
+
+    /**
+     * Anima los elementos de entrada secuencialmente
+     */
+    private void animarElementosEntrada() {
+        Handler handler = new Handler();
+
+        // Animar ícono header (0ms)
+        if (iconoHeader != null) {
+            ObjectAnimator.ofFloat(iconoHeader, "alpha", 0f, 1f).setDuration(600).start();
+            ObjectAnimator.ofFloat(iconoHeader, "translationY", 50f, 0f).setDuration(600).start();
+        }
+
+        // Animar formulario (200ms después)
+        handler.postDelayed(() -> {
+            Animation slideUp = AnimationUtils.loadAnimation(this, R.anim.fade_slide_up);
+            if (findViewById(R.id.campoUsuario) != null) {
+                findViewById(R.id.campoUsuario).getParent().getParent().startAnimation(slideUp);
+            }
+        }, 200);
+
+        // Animar botón (400ms después)
+        handler.postDelayed(() -> {
+            Animation scaleIn = AnimationUtils.loadAnimation(this, R.anim.scale_fade_in);
+            botonIngresar.startAnimation(scaleIn);
+
+            // Inicializar validación después de animaciones
+            validarCamposYActivarBoton();
+        }, 400);
+    }
+
+    /**
+     * Anima el botón cuando se presiona
+     */
+    private void animarBoton(View boton) {
+        // Escala down y up
+        AnimatorSet animatorSet = new AnimatorSet();
+        ObjectAnimator scaleDownX = ObjectAnimator.ofFloat(boton, "scaleX", 1f, 0.95f);
+        ObjectAnimator scaleDownY = ObjectAnimator.ofFloat(boton, "scaleY", 1f, 0.95f);
+        ObjectAnimator scaleUpX = ObjectAnimator.ofFloat(boton, "scaleX", 0.95f, 1f);
+        ObjectAnimator scaleUpY = ObjectAnimator.ofFloat(boton, "scaleY", 0.95f, 1f);
+
+        scaleDownX.setDuration(75);
+        scaleDownY.setDuration(75);
+        scaleUpX.setDuration(75);
+        scaleUpY.setDuration(75);
+
+        animatorSet.play(scaleDownX).with(scaleDownY);
+        animatorSet.play(scaleUpX).with(scaleUpY).after(scaleDownX);
+        animatorSet.start();
+    }
+
+    /**
+     * Método auxiliar para encontrar la primera CardView
+     */
+    private CardView encontrarPrimeraCardView(android.view.ViewGroup parent) {
+        for (int i = 0; i < parent.getChildCount(); i++) {
+            View child = parent.getChildAt(i);
+            if (child instanceof CardView) {
+                return (CardView) child;
+            } else if (child instanceof android.view.ViewGroup) {
+                CardView found = encontrarPrimeraCardView((android.view.ViewGroup) child);
+                if (found != null) return found;
+            }
+        }
+        return null;
+    }
 }
